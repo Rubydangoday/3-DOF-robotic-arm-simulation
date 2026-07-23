@@ -1,0 +1,21 @@
+function valid = filter_joint_limits(sols)
+%FILTER_JOINT_LIMITS  Tra ve vector logical danh dau nghiem nao nam trong
+%gioi han goc khop thuc te cua robot 3-DOF:
+%   -120 <= theta1 <= 120
+%      0 <= theta2 <=  90
+%   -135 <= theta3 <=  90
+%   valid = filter_joint_limits(sols)  
+
+    if isempty(sols)
+        valid = false(0,1);
+        return;
+    end
+
+    th1 = sols(:,1);
+    th2 = sols(:,2);
+    th3 = sols(:,3);
+
+    valid = (th1 >= -180 & th1 <= 180) & ...
+            (th2 >=    0 & th2 <=  90) & ...
+            (th3 >= -135 & th3 <=  135);
+end
