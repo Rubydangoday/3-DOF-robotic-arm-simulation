@@ -1,0 +1,53 @@
+function homeDeg = calibrateAssem1Offsets(dataScript, modelName)
+%CALIBRATEASSEM1OFFSETS  In ra goc "home" hien tai (o vi tri lap rap goc
+
+    if nargin < 1, dataScript = 'Assem1_DataFile'; end
+    if nargin < 2, modelName = 'Assem1'; end
+
+    smiData = [];
+    try
+        mws = get_param(modelName, 'ModelWorkspace');
+        if mws.hasVariable('smiData')
+            smiData = mws.getVariable('smiData');
+        end
+    catch
+        % model chua mo hoac khong co Model Workspace -> roi xuong duoi
+    end
+
+    if isempty(smiData)
+        if ~evalin('base', 'exist(''smiData'',''var'')')
+            evalin('base', dataScript);
+        end
+        smiData = evalin('base', 'smiData');
+    end
+
+    ids = { "[part12-2:-:truc-1]", "Cylindrical"; ...
+            "[Part1-3:-:truc12-2]", "Revolute"; ...
+            "[Part2-1:-:Part3-2]", "Cylindrical" };
+
+    homeDeg = zeros(1,3);
+    names = {'J1','J2','J3'};
+    fprintf('--- Goc "home" hien tai (theo Assem1_DataFile.m) ---\n');
+    for k = 1:3
+        id = ids{k,1};
+        kind = ids{k,2};
+        if strcmp(kind,'Cylindrical')
+            arr = smiData.CylindricalJoint;
+        else
+            arr = smiData.RevoluteJoint;
+        end
+        val = NaN;
+        for j = 1:numel(arr)
+            if strcmp(string(arr(j).ID), id)
+                val = arr(j).Rz.Pos;
+                break;
+            end
+        end
+        homeDeg(k) = val;
+        fprintf('  %s  (%s, ID=%s) = %.4f deg\n', names{k}, kind, id, val);
+    end
+    fprintf(['\nNeu robot dang o tu the theta=[0 0 0] trong thuc te/CAD, ' ...
+              'gia tri in ra chinh la opts.offsetDeg can truyen vao ' ...
+              'animateAssem1. Neu chieu quay CAD nguoc voi quy uoc DH, ' ...
+              'dat opts.signFlip(k) = -1 cho khop tuong ung.\n']);
+end
