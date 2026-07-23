@@ -1,0 +1,1978 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<SimscapeMultibodyImportXML version="2.0" xmlns="urn:mathworks:SimscapeMultibody:import" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<Created by="" on="07/21/26||21:15:41" using="Simscape Multibody Link Version 7.4" from="SolidWorks 30.5.0"/>
+<ModelUnits mass="kilogram" length="millimeter"/>
+<DataUnits mass="kilogram" length="meter"/>
+<RootAssembly name="Assem1" uid="Assem1" version="5024">
+<AssemblyFile name="Assem1.SLDASM" type="SolidWorks Assembly"/>
+<InstanceTree>
+<Instance name="instrument ball bearing_68_am-8" uid="instrument ball bearing_68_am-8" entityUid="instrument ball bearing_68_am*:*AFBMA 12.1.4.1 - 0200-27 - Full,SI,NC,Full_68">
+<Transform>
+<Rotation>2.3396721493940286e-15 0.93295914313127193 0.35998227351879808 1.2440433060327919e-15 -0.35998227351879808 0.93295914313127193 1 -1.7349849860452278e-15 -2.0028820764420239e-15</Rotation>
+<Translation>0.14638311323410438 0.2831244894036043 0.34650621452569264</Translation>
+</Transform>
+</Instance>
+<Instance name="Part3-2" uid="Part3-2" entityUid="Part3*:*Default">
+<Transform>
+<Rotation>0 1 -7.2112562929925175e-16 1 0 0 0 -7.2112562929925175e-16 -0.99999999999999967</Rotation>
+<Translation>-0.05361688676589569 0.2831244894036043 0.30200621452569293</Translation>
+</Transform>
+</Instance>
+<Instance name="Part1-3" uid="Part1-3" entityUid="Part1*:*Default">
+<Transform>
+<Rotation>7.2164496600635175e-16 -7.4777985073814812e-16 1 0 1 7.4777985073814743e-16 -1 0 7.2164496600635175e-16</Rotation>
+<Translation>0.14638311323436642 0.013124489403603638 0.32160621452569293</Translation>
+</Transform>
+</Instance>
+<Instance name="23HS30-2804S-HG10-1" uid="23HS30-2804S-HG10-1" entityUid="23HS30-2804S-HG10*:*Default">
+<Transform>
+<Rotation>-1 -7.0875253890799323e-16 7.2164496600635175e-16 -7.0875253890799303e-16 1 0 -7.2164496600635175e-16 0 -1</Rotation>
+<Translation>0.14638311323437095 0.14312448940359879 0.50960621452569344</Translation>
+</Transform>
+</Instance>
+<Instance name="part12-2" uid="part12-2" grounded="true" entityUid="part12*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.1463831132343674 -0.19837551059639574 0.38160621452569349</Translation>
+</Transform>
+</Instance>
+<Instance name="23HS30-2804S-HG10-2" uid="23HS30-2804S-HG10-2" entityUid="23HS30-2804S-HG10*:*Default">
+<Transform>
+<Rotation>1 0 3.6848027537512207e-16 -3.6848027537512212e-16 0 1 0 -1 0</Rotation>
+<Translation>0.1463831132343674 -0.19837551059639572 0.38160621452569349</Translation>
+</Transform>
+</Instance>
+<Instance name="Part2-1" uid="Part2-1" entityUid="Part2*:*Default">
+<Transform>
+<Rotation>1 -1.3842728133352609e-12 0 1.3842728133352609e-12 1 0 0 0 1</Rotation>
+<Translation>0.14638311323423581 0.18812448940360432 0.31400621452569333</Translation>
+</Transform>
+</Instance>
+<Instance name="tru-2" uid="tru-2" entityUid="tru*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.1463831132343674 -0.088375510596395743 0.43410621452569353</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut jam_am-2" uid="hex nut jam_am-2" entityUid="hex nut jam_am*:*B18.2.4.5M - Hex jam nut,  M8 x 1.25 --D-N">
+<Transform>
+<Rotation>0.86602540378443804 0.50000000000000111 0 0 0 -1 -0.50000000000000111 0.86602540378443804 0</Rotation>
+<Translation>0.14638311323436626 -0.0033755105963957366 0.43410621452569392</Translation>
+</Transform>
+</Instance>
+<Instance name="thrust ball bearing2_68_am-1" uid="thrust ball bearing2_68_am-1" entityUid="thrust ball bearing2_68_am*:*AFBMA 24.1.5 - 20TA12 - 10,DE,NC,10_68">
+<Transform>
+<Rotation>-2.322584048364999e-15 0.9999809954386627 0.0061651246136496529 6.7832881718293337e-16 0.0061651246136496529 -0.9999809954386627 -1 -2.3183579269870267e-15 -6.92634945925165e-16</Rotation>
+<Translation>0.14638311323410438 0.2831244894036043 0.31300621452569277</Translation>
+</Transform>
+</Instance>
+<Instance name="tru-3" uid="tru-3" entityUid="tru*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.1463831132343674 -0.088375510596395743 0.48410621452569352</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut jam_am-3" uid="hex nut jam_am-3" entityUid="hex nut jam_am*:*B18.2.4.5M - Hex jam nut,  M8 x 1.25 --D-N">
+<Transform>
+<Rotation>0.86602540378443804 0.50000000000000111 0 0 0 -1 -0.50000000000000111 0.86602540378443804 0</Rotation>
+<Translation>0.14638311323436673 -0.0033755105963957366 0.26910621452569383</Translation>
+</Transform>
+</Instance>
+<Instance name="heavy duty external retaining ring_am-4" uid="heavy duty external retaining ring_am-4" entityUid="heavy duty external retaining ring_am*:*B27.8M - 3DM1-20">
+<Transform>
+<Rotation>-0.045098384075172686 -0.99898255027493255 7.4504106846808772e-16 0.99898255027493255 -0.045098384075172686 -1.2490079391399607e-16 1.5837386189311843e-16 7.3865020266258359e-16 0.99999999999999989</Rotation>
+<Translation>0.14638311323410436 0.2831244894036043 0.35100621452569308</Translation>
+</Transform>
+</Instance>
+<Instance name="tru-1" uid="tru-1" entityUid="tru*:*Default">
+<Transform>
+<Rotation>1 0 0 0 1 0 0 0 1</Rotation>
+<Translation>0.14638311323436737 -0.088375510596395743 0.2691062145256935</Translation>
+</Transform>
+</Instance>
+<Instance name="instrument ball bearing_68_am-12" uid="instrument ball bearing_68_am-12" entityUid="instrument ball bearing_68_am*:*AFBMA 12.1.4.1 - 0150-21 - Full,SI,NC,Full_68">
+<Transform>
+<Rotation>1.6653345369462479e-16 0 -1 0 1 0 1 0 1.6653345369462479e-16</Rotation>
+<Translation>0.14638311323436659 0.093124489403603683 0.37710621452569282</Translation>
+</Transform>
+</Instance>
+<Instance name="hex nut jam_am-1" uid="hex nut jam_am-1" entityUid="hex nut jam_am*:*B18.2.4.5M - Hex jam nut,  M8 x 1.25 --D-N">
+<Transform>
+<Rotation>0.86602540378443804 0.50000000000000111 0 0 0 -1 -0.50000000000000111 0.86602540378443804 0</Rotation>
+<Translation>0.14638311323436606 -0.0033755105963957366 0.48410621452569391</Translation>
+</Transform>
+</Instance>
+<Instance name="heavy duty external retaining ring_am-2" uid="heavy duty external retaining ring_am-2" entityUid="heavy duty external retaining ring_am*:*B27.8M - 3DM1-12">
+<Transform>
+<Rotation>-0.9312851718287587 -0.36429099457971698 0 -0.36429099457971698 0.9312851718287587 0 0 0 -0.99999999999999989</Rotation>
+<Translation>0.14638311323436631 0.15312448940360365 0.29200621452569286</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-10" uid="socket head cap screw_am-10" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>3.3306690738755051e-16 0.7803876834981579 0.62529598067185677 0 0.62529598067185677 -0.7803876834981579 -1 2.9613304195378264e-16 1.6307210012834917e-16</Rotation>
+<Translation>0.16229311323436643 0.16903448940360369 0.2766062145256929</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-5" uid="socket head cap screw_am-5" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>4.9960036108132064e-16 0.9906178750468938 0.13666098798697715 0 0.13666098798697715 -0.9906178750468938 -1 4.8615522508000634e-16 1.3175892648556249e-16</Rotation>
+<Translation>0.16995311323436624 0.1666944894036039 0.39260621452569283</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-6" uid="socket head cap screw_am-6" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>3.8857805861880479e-16 0.44904513237385857 -0.89350907611022268 1.0126926595729624e-16 -0.89350907611022279 -0.44904513237385846 -0.99999999999999978 0 -4.9960036108132044e-16</Rotation>
+<Translation>0.16995311323436632 0.11955448940360386 0.39260621452569289</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-19" uid="socket head cap screw_am-19" entityUid="socket head cap screw_am*:*B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX">
+<Transform>
+<Rotation>-7.4776915596215193e-16 -0.44167203048984643 0.89717658099338304 1 -3.3023273250227191e-16 6.7089869175720547e-16 0 0.89717658099338304 0.44167203048984643</Rotation>
+<Translation>0.16901053023233711 -0.0023755105963957149 0.34423363152366276</Translation>
+</Transform>
+</Instance>
+<Instance name="base_2-1" uid="base_2-1" entityUid="base_2*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 1 0 -1 0</Rotation>
+<Translation>0.14638311323436737 -0.068375510596395739 0.38160621452569338</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-7" uid="socket head cap screw_am-7" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>8.3829513680746327e-16 0.023052508764207461 0.99973425560979778 -1.1014098017177591e-15 0.99973425560979778 -0.023052508764207461 -1 -1.0817923022533908e-15 8.6346262368460585e-16</Rotation>
+<Translation>0.12281311323436619 0.11955448940360425 0.39260621452569283</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-8" uid="socket head cap screw_am-8" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>3.8857805861880479e-16 -0.20579374962951968 0.97859538759051101 0 0.97859538759051101 0.2057937496295196 -1 0 3.8857805861880479e-16</Rotation>
+<Translation>0.12281311323436628 0.16669448940360382 0.39260621452569294</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-9" uid="socket head cap screw_am-9" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>6.1062266354385227e-16 0.19729364831116003 0.98034443760143419 -2.5670689189236958e-16 0.98034443760143419 -0.19729364831116003 -1 -1.3118920052859271e-16 6.4926717092665165e-16</Rotation>
+<Translation>0.13047311323436633 0.13721448940360373 0.27660621452569284</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-12" uid="socket head cap screw_am-12" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>2.7755575615628963e-16 0.60639713299636411 -0.79516194394210671 0 -0.79516194394210682 -0.606397132996364 -0.99999999999999989 1.4031641846819257e-16 -2.4204916212498283e-16</Rotation>
+<Translation>0.16229311323436649 0.1372144894036037 0.27660621452569284</Translation>
+</Transform>
+</Instance>
+<Instance name="instrument ball bearing_68_am-13" uid="instrument ball bearing_68_am-13" entityUid="instrument ball bearing_68_am*:*AFBMA 12.1.4.1 - 0150-21 - Full,SI,NC,Full_68">
+<Transform>
+<Rotation>1.6653345369462479e-16 0 -1 0 1 0 1 0 1.6653345369462479e-16</Rotation>
+<Translation>0.14638311323436659 0.093124489403603669 0.26610621452569277</Translation>
+</Transform>
+</Instance>
+<Instance name="truc12-2" uid="truc12-2" entityUid="truc12*:*Default">
+<Transform>
+<Rotation>1.6653349649553747e-16 -0.49611997077498315 -0.86825398046782931 0 0.86825398046782931 -0.49611997077498315 1 0 1.4561738769494842e-16</Rotation>
+<Translation>0.14638311323436731 0.09312448940360428 0.26360621452569344</Translation>
+</Transform>
+</Instance>
+<Instance name="radial ball bearing_68_am-4" uid="radial ball bearing_68_am-4" entityUid="radial ball bearing_68_am*:*AFBMA 20.1 - 17-12 - 20,SI,NC,20_68">
+<Transform>
+<Rotation>0 -1 0 1 0 0 0 0 1</Rotation>
+<Translation>0.14638311323436681 -0.16037551059639443 0.3216062145256926</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-11" uid="socket head cap screw_am-11" entityUid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX">
+<Transform>
+<Rotation>3.3306690738754775e-16 -0.98288349005003439 -0.18422824155667331 0 -0.18422824155667331 0.98288349005003439 -1 -3.2650966748111143e-16 0</Rotation>
+<Translation>0.13047311323436639 0.16903448940360369 0.2766062145256929</Translation>
+</Transform>
+</Instance>
+<Instance name="truc-1" uid="truc-1" entityUid="truc*:*Default">
+<Transform>
+<Rotation>1.3330447201264343e-16 0.70710678118654435 0.70710678118655068 -1 -2.0708082172691407e-16 3.9560181397217634e-16 4.2616097860620784e-16 -0.70710678118655068 0.70710678118654435</Rotation>
+<Translation>0.14638311323436737 0.001624489403604254 0.32160621452569349</Translation>
+</Transform>
+</Instance>
+<Instance name="23HS30-2804S-PG4-2" uid="23HS30-2804S-PG4-2" entityUid="23HS30-2804S-PG4*:*Default">
+<Transform>
+<Rotation>2.8560487308482146e-14 -1 0 1 2.8560487308482146e-14 0 0 0 1</Rotation>
+<Translation>0.14638321065766885 0.15312439198030051 0.13960621452569283</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-22" uid="socket head cap screw_am-22" entityUid="socket head cap screw_am*:*B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX">
+<Transform>
+<Rotation>-7.4776915596215193e-16 -0.44167203048984643 0.89717658099338304 1 -3.3023273250227191e-16 6.7089869175720547e-16 0 0.89717658099338304 0.44167203048984643</Rotation>
+<Translation>0.12375569623639776 -0.0023755105963957426 0.29897879752772394</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-23" uid="socket head cap screw_am-23" entityUid="socket head cap screw_am*:*B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX">
+<Transform>
+<Rotation>-7.4776915596215193e-16 -0.44167203048984643 0.89717658099338304 1 -3.3023273250227191e-16 6.7089869175720547e-16 0 0.89717658099338304 0.44167203048984643</Rotation>
+<Translation>0.16901053023233714 -0.0023755105963963463 0.29897879752772377</Translation>
+</Transform>
+</Instance>
+<Instance name="socket head cap screw_am-24" uid="socket head cap screw_am-24" entityUid="socket head cap screw_am*:*B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX">
+<Transform>
+<Rotation>-7.4776915596215193e-16 -0.44167203048984643 0.89717658099338304 1 -3.3023273250227191e-16 6.7089869175720547e-16 0 0.89717658099338304 0.44167203048984643</Rotation>
+<Translation>0.12375569623639829 -0.0023755105963962908 0.34423363152366315</Translation>
+</Transform>
+</Instance>
+<Instance name="base_3-1" uid="base_3-1" entityUid="base_3*:*Default">
+<Transform>
+<Rotation>1 0 0 0 0 1 0 -1 0</Rotation>
+<Translation>0.1463831132343674 -0.018375510596395736 0.38160621452569343</Translation>
+</Transform>
+</Instance>
+<Instance name="thrust ball bearing_68_am-1" uid="thrust ball bearing_68_am-1" entityUid="thrust ball bearing_68_am*:*AFBMA 24.1.4 - 30TA11 - 16,DE,NC,16_68">
+<Transform>
+<Rotation>0 1 0 -1 0 0 0 0 1</Rotation>
+<Translation>0.14638311323436753 -0.00087551059639578988 0.32160621452569293</Translation>
+</Transform>
+</Instance>
+<Instance name="radial ball bearing_68_am-6" uid="radial ball bearing_68_am-6" entityUid="radial ball bearing_68_am*:*AFBMA 20.1 - 17-12 - 20,SI,NC,20_68">
+<Transform>
+<Rotation>7.4776915901490834e-16 0.9929876092166654 0.11821847546881582 -1 7.4252076723367567e-16 0 0 -0.11821847546881582 0.9929876092166654</Rotation>
+<Translation>0.14638311323436781 -0.070375510596390245 0.3216062145256936</Translation>
+</Transform>
+</Instance>
+</InstanceTree>
+<Constraints>
+<Coincident name="Coincident58">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.081000000000000003 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-2</Uid>
+</InstancePath>
+<Position>0 0 0.081000000000000003</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric109">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>-0.02356999999999998 0.023570000000000008 0.12</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-5</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident81">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0 0 0.122</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-5</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000038 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric110">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>-0.023569999999998648 -0.023569999999999994 0.12</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-6</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-0.99999999999999978 0 -1.0692786799093056e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident82">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0 0 0.122</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-6</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000177 0</Position>
+<Axis>0.99999999999999978 0 1.0692786799093056e-16</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric111">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0.023569999999999994 0.023570000000001368 0.12</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-8</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident84">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0 0 0.122</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-8</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000038 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric112">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0.023570000000001354 -0.023569999999998648 0.12</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-7</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident87">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0 0 0.122</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-7</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000038 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric151">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 -0.094999999999999987 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric152">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-12</Uid>
+</InstancePath>
+<Position>-0.020637499999999975 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric153">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-13</Uid>
+</InstancePath>
+<Position>-0.020637499999999975 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident127">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-19</Uid>
+</InstancePath>
+<Position>0.0040000000000000001 0.0034999999999999754 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric181">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0 -0.059999999999999998</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident130">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.040000000000000008 -0.059999999999999998</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>radial ball bearing_68_am-4</Uid>
+</InstancePath>
+<Position>0.0020000000000000018 0.0088000000000000023 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric185">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.040000000000000008 -0.059999999999999998</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>radial ball bearing_68_am-4</Uid>
+</InstancePath>
+<Position>-0.020637500000000003 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric188">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0.031999999999999973</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-19</Uid>
+</InstancePath>
+<Position>-0.031749999999999959 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric192">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.022627416997969441 0 0.022627416997969635</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-19</Uid>
+</InstancePath>
+<Position>-0.031749999999999959 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident132">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>-0.0115 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric194">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.05800001199999999 0.080000000000000016 0</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident133">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.16 -0.03999999999999998</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident134">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.16 -0.03999999999999998</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-13</Uid>
+</InstancePath>
+<Position>-0.0025000000000000022 0.0096000000000000113 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident135">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.058000000000000052 0.16 -0.03999999999999998</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-12</Uid>
+</InstancePath>
+<Position>0.0025000000000000022 0.0076999999999999985 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric199">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.057999999999999996 0.10643000000000004 -0.023569999999999966</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-7</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric200">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.057999999999999996 0.10643000000000004 0.023570000000000035</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-6</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-0.99999999999999978 0 -1.0692786799093056e-16</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric201">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.057999999999999996 0.15357000000000004 -0.023569999999999966</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-8</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric202">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.057999999999999996 0.15357000000000004 0.023570000000000008</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-5</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident140">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>-0.055499999999999994 0.13 0</Position>
+<Axis>-1 0 1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-HG10-1</Uid>
+</InstancePath>
+<Position>0 0 0.13250000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric207">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.15591000000000002 0.015910000000000035</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-10</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric208">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.12409000000000003 0.015910000000000035</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-12</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric210">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.15591000000000002 -0.01590999999999998</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-11</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric212">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.057999999999999996 0.12409000000000001 -0.01590999999999998</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-9</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident141">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0.029999999999999999 -0.03999999999999998</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-10</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.004249999999999976 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident142">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0.029999999999999999 -0.03999999999999998</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-11</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000038 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident143">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0.029999999999999999 -0.03999999999999998</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-9</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000038 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident144">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.049999999999999989 0.029999999999999999 -0.03999999999999998</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-12</Uid>
+</InstancePath>
+<Position>0.0050000000000000044 0.0042500000000000177 0</Position>
+<Axis>0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric216">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>radial ball bearing_68_am-6</Uid>
+</InstancePath>
+<Position>-0.020637500000000003 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident146">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.126 -0.059999999999999998</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>radial ball bearing_68_am-6</Uid>
+</InstancePath>
+<Position>0.0019999999999999879 0.0087999999999999745 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric227">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.05800001199999999 0.14000000000000001 0</Position>
+<Axis>-1 0 1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>0 0 0.15399999999999997</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric228">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-10</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>0.015909902576698193 -0.015909902576697305 0.124</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric229">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-11</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>0.015909902576697277 0.015909902576697332 0.124</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric230">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-12</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-0.99999999999999989 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>-0.015909902576696416 -0.01590990257669822 0.124</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric231">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>socket head cap screw_am-9</Uid>
+</InstancePath>
+<Position>-0.031749999999999945 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>-0.015909902576697305 0.015909902576696416 0.124</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident151">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.055499999999999994 0.14000000000000001 0</Position>
+<Axis>1 0 -1.7347234759768071e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>0 0 0.1265</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric233">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>heavy duty external retaining ring_am-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0010999999999999899</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>23HS30-2804S-PG4-2</Uid>
+</InstancePath>
+<Position>0 0 0.15399999999999997</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric236">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 -0.031999999999999973</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>socket head cap screw_am-22</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident154">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-22</Uid>
+</InstancePath>
+<Position>0.0040000000000000001 0.0035000000000000586 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric237">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>Part1-3</Uid>
+</InstancePath>
+<Position>0.022627416997969441 0 -0.022627416997969607</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>socket head cap screw_am-22</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric238">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0.032000000000000001 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>socket head cap screw_am-23</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident155">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-23</Uid>
+</InstancePath>
+<Position>0.0040000000000000001 0.0035000000000000031 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric239">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 -0.031999999999999987 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>socket head cap screw_am-24</Uid>
+</InstancePath>
+<Position>0.0040000000000000036 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident156">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>socket head cap screw_am-24</Uid>
+</InstancePath>
+<Position>0.0040000000000000001 0.0035000000000000586 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident160">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>0.082499999999999962 0.14749999999999996 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident161">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0.087499999999999939 0.13 -0.15249999999999997</Position>
+<Axis>1 0 -1.8200377452871419e-16</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>0.087500000000000022 -0.14750000000000002 0.050000000000000003</Position>
+<Axis>1 1.8817339400426384e-16 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident162">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>-0.087499999999999994 0.13 0.15250000000000002</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>-0.08249999999999999 -0.15250000000000002 0.050000000000000003</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident166">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0 0.060000000000000109 0.012</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>thrust ball bearing_68_am-1</Uid>
+</InstancePath>
+<Position>0.0054999999999999997 0.015000000000000013 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric241">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0 0.060000000000000109 0.012</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>thrust ball bearing_68_am-1</Uid>
+</InstancePath>
+<Position>-0.0054999999999999979 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident167">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc-1</Uid>
+</InstancePath>
+<Position>-0.0030000000000000005 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>thrust ball bearing_68_am-1</Uid>
+</InstancePath>
+<Position>-0.0054999999999999997 0.015000000000000013 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident168">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>0.082499999999999962 0.14749999999999996 0.050000000000000003</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0.082499999999999934 0.14749999999999999 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident169">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>-0.087500000000000036 0.14749999999999996 0.050000000000000003</Position>
+<Axis>-1 -1.4113004550319788e-16 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>-0.08750000000000005 0.14749999999999999 0.014999999999999999</Position>
+<Axis>-1 -1.4113004550319788e-16 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident170">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_2-1</Uid>
+</InstancePath>
+<Position>0.082499999999999962 0.15249999999999997 0.050000000000000003</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0.082499999999999934 0.1525 0.014999999999999999</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric242">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 -0.11249999999999999</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident172">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>tru-1</Uid>
+</InstancePath>
+<Position>0.0039999999999906777 0.020000000000000004 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric243">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0.052500000000000047</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-2</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident174">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>tru-2</Uid>
+</InstancePath>
+<Position>0.0039999999999906777 0.020000000000000004 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric244">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0.10250000000000004</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-3</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident176">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>part12-2</Uid>
+</InstancePath>
+<Position>0 0.13 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>tru-3</Uid>
+</InstancePath>
+<Position>0.0039999999999906777 0.020000000000000004 0</Position>
+<Axis>0 -1 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric245">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-3</Uid>
+</InstancePath>
+<Position>0 0.095000000000000029 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>hex nut jam_am-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident178">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0.082499999999999934 0.14749999999999999 0.014999999999999999</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut jam_am-1</Uid>
+</InstancePath>
+<Position>0 0.0075055534994651896 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric246">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-2</Uid>
+</InstancePath>
+<Position>0 0.095000000000000029 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>hex nut jam_am-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0035544754770741697</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident180">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0.082499999999999934 0.14749999999999999 0.014999999999999999</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut jam_am-2</Uid>
+</InstancePath>
+<Position>0 0.0075055534994651341 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric247">
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>tru-1</Uid>
+</InstancePath>
+<Position>0 0.095000000000000029 0</Position>
+<Axis>0 1 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>hex nut jam_am-3</Uid>
+</InstancePath>
+<Position>0 0 -0.0040000000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident183">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0.082499999999999934 0.14749999999999999 0.014999999999999999</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>hex nut jam_am-3</Uid>
+</InstancePath>
+<Position>0 0.0075055534994651341 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident185">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 0.095000000000000057 0.030000000000000027</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-8</Uid>
+</InstancePath>
+<Position>-0.0025000000000000022 0.012449999999999996 1.1102230246251565e-16</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident186">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 0.095000000000000057 0.0060000000000000053</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>thrust ball bearing2_68_am-1</Uid>
+</InstancePath>
+<Position>-0.0069999999999999507 0.010000000000000009 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident188">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 0 0</Position>
+<Axis>0 0 -1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>truc12-2</Uid>
+</InstancePath>
+<Position>0.0504 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Coincident name="Coincident189">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-8</Uid>
+</InstancePath>
+<Position>0.0025000000000000022 0.013300000000000006 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="circle">
+<InstancePath>
+<Uid>heavy duty external retaining ring_am-4</Uid>
+</InstancePath>
+<Position>0 0.00079698498895047765 -0.0020000000000000018</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric258">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 0.095000000000000057 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part3-2</Uid>
+</InstancePath>
+<Position>0 0.20000000000000001 -0.049999999999999989</Position>
+<Axis>0 0 0.99999999999999967</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric259">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part3-2</Uid>
+</InstancePath>
+<Position>0 0.20000000000000001 -0.049999999999999989</Position>
+<Axis>0 0 0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>heavy duty external retaining ring_am-4</Uid>
+</InstancePath>
+<Position>0 0 -0.0020000000000000018</Position>
+<Axis>0 0 0.99999999999999989</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric261">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part3-2</Uid>
+</InstancePath>
+<Position>0 0.20000000000000001 -0.049999999999999989</Position>
+<Axis>0 0 0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-8</Uid>
+</InstancePath>
+<Position>-0.020637499999999975 0 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident198">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part2-1</Uid>
+</InstancePath>
+<Position>0 0 0.035000000000000031</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>instrument ball bearing_68_am-8</Uid>
+</InstancePath>
+<Position>0.0025000000000000022 0.013300000000000006 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric262">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>Part3-2</Uid>
+</InstancePath>
+<Position>0 0.20000000000000001 -0.049999999999999989</Position>
+<Axis>0 0 0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>thrust ball bearing2_68_am-1</Uid>
+</InstancePath>
+<Position>0.034924999999999984 0 0</Position>
+<Axis>-1 0 0</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Coincident name="Coincident199">
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>Part3-2</Uid>
+</InstancePath>
+<Position>0 0.20000000000000001 -0.0040000000000000036</Position>
+<Axis>0 0 -0.99999999999999967</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="plane">
+<InstancePath>
+<Uid>thrust ball bearing2_68_am-1</Uid>
+</InstancePath>
+<Position>0.0070000000000000062 0.010000000000000009 0</Position>
+<Axis>1 0 0</Axis>
+</ConstraintGeometry>
+</Coincident>
+<Concentric name="Concentric263">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0 -0.10250000000000004 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut jam_am-1</Uid>
+</InstancePath>
+<Position>0 0 -0.0040000000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric264">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0 -0.052500000000000047 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut jam_am-2</Uid>
+</InstancePath>
+<Position>0 0 -0.0040000000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+<Concentric name="Concentric265">
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>base_3-1</Uid>
+</InstancePath>
+<Position>0 0.11249999999999999 0</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+<ConstraintGeometry geomType="cylinder">
+<InstancePath>
+<Uid>hex nut jam_am-3</Uid>
+</InstancePath>
+<Position>0 0 -0.0040000000000000001</Position>
+<Axis>0 0 1</Axis>
+</ConstraintGeometry>
+</Concentric>
+</Constraints>
+</RootAssembly>
+<Assemblies>
+</Assemblies>
+<Parts>
+<Part name="23HS30-2804S-HG10" uid="23HS30-2804S-HG10*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="23HS30-2804S-HG10.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.37620975753305197</Mass>
+<CenterOfMass>-7.6193344203809547e-06 5.3920969308903063e-06 0.06548548194244809</CenterOfMass>
+<Inertia>0.00064958392615954545 0.00064964402215666778 0.00017024230023800181 -1.6869990504718444e-07 -1.7486453809157264e-07 -9.5068327610340241e-11</Inertia>
+</MassProperties>
+<GeometryFile name="23HS30-2804S-HG10_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="23HS30-2804S-PG4" uid="23HS30-2804S-PG4*:*Default" version="114">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="23HS30-2804S-PG4.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.3476666116897949</Mass>
+<CenterOfMass>-3.2930890287305539e-08 -1.5531116594152184e-05 0.060456024921648727</CenterOfMass>
+<Inertia>0.00052290666244130001 0.00052267341203151478 0.00015515075382878924 -1.6264375152107342e-07 -7.7074995879630391e-10 -8.5768325887518908e-10</Inertia>
+</MassProperties>
+<GeometryFile name="23HS30-2804S-PG4_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Diffuse r="0.792156862745098" g="0.81960784313725488" b="0.93333333333333335" a="1"/>
+<Specular r="0.396078431372549" g="0.40980392156862744" b="0.46666666666666667" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Part1" uid="Part1*:*Default" version="5283">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Part1.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.54733024283444021</Mass>
+<CenterOfMass>0.00018124215749780042 0.042706536085127346 0</CenterOfMass>
+<Inertia>0.0013405616070311314 0.0012607673924558823 0.001988810701143001 0 0 -6.4420419329379022e-06</Inertia>
+</MassProperties>
+<GeometryFile name="Part1_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Part2" uid="Part2*:*Default" version="907">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Part2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.62533367309915222</Mass>
+<CenterOfMass>0 -0.0031568109332688848 0.017779085583103746</CenterOfMass>
+<Inertia>0.0035008647872409198 0.00050618292180452625 0.0038964993492293567 -7.744446763903964e-06 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Part2_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="Part3" uid="Part3*:*Default" version="1147">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="Part3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.36837447338415441</Mass>
+<CenterOfMass>0 0.1032360721684874 -0.0010284870273626857</CenterOfMass>
+<Inertia>0.0020096789529652141 0.00015142036996821482 0.0021066422870122665 3.6660791330465386e-05 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="Part3_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="base_2" uid="base_2*:*Default" version="146">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base_2.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>1.4173652656934652</Mass>
+<CenterOfMass>0 0 0.023861480874010604</CenterOfMass>
+<Inertia>0.015792388831329243 0.0064797517612079697 0.02168524618268312 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_2_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="base_3" uid="base_3*:*Default" version="201">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="base_3.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.97854752361653952</Mass>
+<CenterOfMass>0 -0.00051572557892294092 0.0074650131862802121</CenterOfMass>
+<Inertia>0.0076320759530808724 0.0025479431781079615 0.010143531412248059 2.0718321104538242e-06 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="base_3_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="heavy duty external retaining ring_am" uid="heavy duty external retaining ring_am*:*B27.8M - 3DM1-12" version="1078">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="heavy duty external retaining ring_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>8.5251850823210443e-05</Mass>
+<CenterOfMass>0 0.00033828995562819829 -0.00054999999999999992</CenterOfMass>
+<Inertia>2.1572803707073296e-09 1.7055401549505189e-09 3.8456280690751678e-09 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="heavy duty external retaining ring_am_B27.8M - 3DM1-12_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="heavy duty external retaining ring_am" uid="heavy duty external retaining ring_am*:*B27.8M - 3DM1-20" version="1086">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="heavy duty external retaining ring_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0004083409714507737</Mass>
+<CenterOfMass>0 3.1561663974756664e-05 -0.0010000000000000002</CenterOfMass>
+<Inertia>2.9401907235249105e-08 2.1514216502151557e-08 5.064389642310015e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="heavy duty external retaining ring_am_B27.8M - 3DM1-20_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="hex nut jam_am" uid="hex nut jam_am*:*B18.2.4.5M - Hex jam nut,  M8 x 1.25 --D-N" version="1233">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="hex nut jam_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00042933979113065197</Mass>
+<CenterOfMass>0 3.574162664956957e-09 -0.0019985289476482063</CenterOfMass>
+<Inertia>6.8443654292606802e-09 6.8443083266928121e-09 1.2589978736817998e-08 0 0 -1.045897572742284e-15</Inertia>
+</MassProperties>
+<GeometryFile name="hex nut jam_am_B18.2.4.5M - Hex jam nut-  M8 x 1.25 --D-N_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="instrument ball bearing_68_am" uid="instrument ball bearing_68_am*:*AFBMA 12.1.4.1 - 0150-21 - Full,SI,NC,Full_68" version="1904">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="instrument ball bearing_68_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00061936664306595801</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>5.1980263495611909e-08 2.7064879968610249e-08 2.7064879968610252e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="instrument ball bearing_68_am_AFBMA 12.1.4.1 - 0150-21 - Full-SI-NC-Full_68_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="instrument ball bearing_68_am" uid="instrument ball bearing_68_am*:*AFBMA 12.1.4.1 - 0200-27 - Full,SI,NC,Full_68" version="1704">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="instrument ball bearing_68_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00097233575240927047</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>1.3801523297185662e-07 7.0670600710349785e-08 7.0670600710349811e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="instrument ball bearing_68_am_AFBMA 12.1.4.1 - 0200-27 - Full-SI-NC-Full_68_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="part12" uid="part12*:*Default" version="1458">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="part12.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>8.0275791195394799</Mass>
+<CenterOfMass>0 0.065185369410899793 0.00021326818800060661</CenterOfMass>
+<Inertia>0.077495749042165663 0.087959287390255464 0.03305818097149827 1.6663813015627382e-05 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="part12_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Diffuse r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Specular r="0.69803921568627447" g="0.69803921568627447" b="0.69803921568627447" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="radial ball bearing_68_am" uid="radial ball bearing_68_am*:*AFBMA 20.1 - 17-12 - 20,SI,NC,20_68" version="1833">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="radial ball bearing_68_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00043131586757470651</Mass>
+<CenterOfMass>0 0 0</CenterOfMass>
+<Inertia>2.5473426654687663e-08 1.3204721602830234e-08 1.3204721602830234e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="radial ball bearing_68_am_AFBMA 20.1 - 17-12 - 20-SI-NC-20_68_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="socket head cap screw_am" uid="socket head cap screw_am*:*B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX" version="1387">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="socket head cap screw_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00044709786100209745</Mass>
+<CenterOfMass>0.012177936450012115 0 0</CenterOfMass>
+<Inertia>1.5263326182094779e-09 3.6395385621542159e-08 3.6395385621542159e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="socket head cap screw_am_B18.3.1M - 4 x 0.7 x 25 Hex SHCS -- 25NHX_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="socket head cap screw_am" uid="socket head cap screw_am*:*B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX" version="1352">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="socket head cap screw_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.00063063219304042696</Mass>
+<CenterOfMass>0.010313571815147667 0 0</CenterOfMass>
+<Inertia>3.6386288158360625e-09 3.753499828689328e-08 3.753499828689328e-08 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="socket head cap screw_am_B18.3.1M - 5 x 0.8 x 20 Hex SHCS -- 20NHX_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="thrust ball bearing2_68_am" uid="thrust ball bearing2_68_am*:*AFBMA 24.1.5 - 20TA12 - 10,DE,NC,10_68" version="1560">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="thrust ball bearing2_68_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0093153541913829057</Mass>
+<CenterOfMass>-4.9982430760088166e-06 0 0</CenterOfMass>
+<Inertia>2.2978711129642457e-06 1.3501785586679125e-06 1.3501785586679132e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="thrust ball bearing2_68_am_AFBMA 24.1.5 - 20TA12 - 10-DE-NC-10_68_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="thrust ball bearing_68_am" uid="thrust ball bearing_68_am*:*AFBMA 24.1.4 - 30TA11 - 16,DE,NC,16_68" version="1469">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="thrust ball bearing_68_am.sldprt" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.0078455775684475489</Mass>
+<CenterOfMass>-3.9442042632317238e-06 0 0</CenterOfMass>
+<Inertia>3.0304752590227553e-06 1.6214392882206684e-06 1.6214392882206701e-06 0 0 0</Inertia>
+</MassProperties>
+<GeometryFile name="thrust ball bearing_68_am_AFBMA 24.1.4 - 30TA11 - 16-DE-NC-16_68_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Diffuse r="0.77647058823529413" g="0.75686274509803919" b="0.73725490196078436" a="1"/>
+<Specular r="0.38823529411764707" g="0.3784313725490196" b="0.36862745098039218" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="tru" uid="tru*:*Default" version="155">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="tru.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.059591486631572238</Mass>
+<CenterOfMass>-2.3565869620209576e-08 0.046348906446564454 -9.6728575313576619e-09</CenterOfMass>
+<Inertia>3.0490359145519589e-05 9.0442194802617424e-07 3.0490351295241118e-05 -6.7724724411046157e-11 -5.638542976254239e-11 1.413975217156888e-10</Inertia>
+</MassProperties>
+<GeometryFile name="tru_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="truc" uid="truc*:*Default" version="456">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="truc.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.55692431246448282</Mass>
+<CenterOfMass>0.018096316099080214 -1.3257481476451629e-05 4.3665743140489394e-10</CenterOfMass>
+<Inertia>0.00034974152948807961 0.0014364340560666694 0.0014363988115005666 -2.278937321604519e-12 -2.0197568546769923e-11 2.5401304950797935e-07</Inertia>
+</MassProperties>
+<GeometryFile name="truc_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+<Part name="truc12" uid="truc12*:*Default" version="265">
+<ModelUnits mass="kilogram" length="millimeter"/>
+<PartFile name="truc12.SLDPRT" type="SolidWorks Part"/>
+<MassProperties>
+<Mass>0.14040240374616841</Mass>
+<CenterOfMass>0.057979702967695848 1.2457083438570919e-05 -4.7361054338860001e-12</CenterOfMass>
+<Inertia>3.447911679672294e-06 0.00015893891085031248 0.00015895236775861603 5.8480500677930638e-15 -1.0814113914750703e-14 2.1975184593350139e-08</Inertia>
+</MassProperties>
+<GeometryFile name="truc12_Default_sldprt.STEP" type="STEP"/>
+<VisualProperties>
+<Ambient r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Diffuse r="0.65098039215686276" g="0.61960784313725492" b="0.58823529411764708" a="1"/>
+<Specular r="0.52078431372549028" g="0.49568627450980396" b="0.4705882352941177" a="1"/>
+<Emissive r="0" g="0" b="0" a="1"/>
+<Shininess>0.3125</Shininess>
+</VisualProperties>
+</Part>
+</Parts>
+</SimscapeMultibodyImportXML>
