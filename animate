@@ -1,0 +1,164 @@
+function animateAssem1(theta_deg, opts)
+%ANIMATEASSEM1  Dieu khien mo hinh Simscape Multibody that 
+%di chuyen toi bo goc theta_deg = [theta1 theta2 theta3] (do), de
+%Mechanics Explorer ve lai dung tu the CAD tuong ung.
+%
+%   animateAssem1([30 45 -20])
+%   animateAssem1([30 45 -20], opts)
+%
+%   opts (tuy chon, truyen struct de ghi de mac dinh):
+%       opts.model       - ten model Simulink/Simscape (mac dinh 'Assem1')
+%       opts.dataScript  - ten file du lieu smiData (mac dinh 'Assem1_DataFile')
+%       opts.offsetDeg   - offset cong them cho tung khop [th1 th2 th3] (do)
+%       opts.signFlip    - [1 1 1] hoac -1 neu chieu duong CAD nguoc voi DH
+%       opts.steps       - so buoc noi suy (mac dinh 1 = nhay thang toi
+%                          dich, KHONG noi suy muot). Moi buoc gio goi
+%                          sim() thuc su (co chi phi bien dich model), nen
+%                          neu tang len nhieu buoc de chuyen dong muot,
+%                          moi lan animate se CHAM HON DANG KE. Chi tang
+%                          opts.steps (vd 5-10) neu thuc su can hieu ung
+%                          muot va chap nhan doi lau hon.
+%       opts.pauseTime    - thoi gian nghi giua moi buoc (s), mac dinh 0.02
+
+    if nargin < 2, opts = struct(); end
+    if ~isfield(opts,'model'),      opts.model = 'Assem1'; end
+    if ~isfield(opts,'dataScript'), opts.dataScript = 'Assem1_DataFile'; end
+    if ~isfield(opts,'signFlip'),   opts.signFlip = [1 1 1]; end
+    if ~isfield(opts,'steps'),      opts.steps = 1; end
+    if ~isfield(opts,'pauseTime'),  opts.pauseTime = 0.02; end
+
+    if ~bdIsLoaded(opts.model)
+        try
+            open_system(opts.model);
+        catch ME
+            error('animateAssem1:khongMoDuocModel', ...
+                ['Khong the mo model "%s". Kiem tra: (1) ten file .slx dung ' ...
+                 'khong (truyen opts.model neu khac "Assem1"), (2) file co ' ...
+                 'nam trong path/thu muc hien tai cua MATLAB.\nLoi goc: %s'], ...
+                 opts.model, ME.message);
+        end
+    end
+
+    smiData = local_ensureSmiDataLoaded(opts.dataScript, opts.model);
+    loc = local_findJointLocations(smiData);
+
+    persistent cachedOffsetDeg cachedDataScript
+    if ~isfield(opts,'offsetDeg')
+        if isempty(cachedOffsetDeg) || ~strcmp(cachedDataScript, opts.dataScript) || ...
+                (isfield(opts,'forceReloadOffset') && opts.forceReloadOffset)
+            pristine = local_loadPristine(opts.dataScript);
+            locP = local_findJointLocations(pristine);
+            cachedOffsetDeg = [ local_getVal(pristine, locP(1)), ...
+                                 local_getVal(pristine, locP(2)), ...
+                                 local_getVal(pristine, locP(3)) ];
+            cachedDataScript = opts.dataScript;
+        end
+        opts.offsetDeg = cachedOffsetDeg;
+    end
+
+    startDeg  = [ local_getVal(smiData, loc(1)), ...
+                  local_getVal(smiData, loc(2)), ...
+                  local_getVal(smiData, loc(3)) ];
+    targetDeg = opts.signFlip .* theta_deg(:)' + opts.offsetDeg;
+
+    N = opts.steps;
+    for s = 1:N
+        d = startDeg + (targetDeg - startDeg) * (s/N);
+        smiData = local_setVal(smiData, loc(1), d(1));
+        smiData = local_setVal(smiData, loc(2), d(2));
+        smiData = local_setVal(smiData, loc(3), d(3));
+        assignin('base', 'smiData', smiData);
+        try
+            mws = get_param(opts.model, 'ModelWorkspace');
+            mws.assignin('smiData', smiData);
+        catch
+            % Neu model khong co Model Workspace (vd model don gian hon),
+            % bo qua - assignin('base',...) o tren co the da du.
+        end
+        try
+            set_param(opts.model, 'FastRestart', 'off');
+            set_param(opts.model, 'StopTime', '0');
+            sim(opts.model);
+        catch ME
+            error('animateAssem1:khongCapNhatDuoc', ...
+                ['Khong the cap nhat model "%s" (Fast Restart). Kiem tra: ' ...
+                 '(1) 3 khoi Joint da doi Value sang "Run-time" chua, ' ...
+                 '(2) ID khop trong local_findJointLocations con dung khong.' ...
+                 '\nLoi goc: %s'], opts.model, ME.message);
+        end
+        drawnow;
+        pause(opts.pauseTime);
+    end
+end
+
+%% ---- Cac ham phu (local) ----
+function smiData = local_loadPristine(dataScriptName)
+    run(dataScriptName);   
+end
+
+function smiData = local_ensureSmiDataLoaded(dataScriptName, modelName)
+    try
+        mws = get_param(modelName, 'ModelWorkspace');
+        if mws.hasVariable('smiData')
+            smiData = mws.getVariable('smiData');
+            return;
+        end
+    catch
+        % modelName chua duoc mo, hoac khong co Model Workspace -> roi xuong duoi
+    end
+
+    if ~evalin('base', 'exist(''smiData'',''var'')')
+        evalin('base', dataScriptName);
+    end
+    smiData = evalin('base', 'smiData');
+end
+
+function loc = local_findJointLocations(smiData)
+% loc(k) = struct('kind','Cylindrical'/'Revolute', 'index', i)
+    targets = { ...
+        struct('kind','Cylindrical', 'id', "[part12-2:-:truc-1]"), ...   % J1
+        struct('kind','Revolute',    'id', "[Part1-3:-:truc12-2]"), ...  % J2
+        struct('kind','Cylindrical', 'id', "[Part2-1:-:Part3-2]") ...    % J3
+        };
+
+    loc = repmat(struct('kind','', 'index', 0), 1, 3);
+    for k = 1:3
+        t = targets{k};
+        if strcmp(t.kind, 'Cylindrical')
+            arr = smiData.CylindricalJoint;
+        else
+            arr = smiData.RevoluteJoint;
+        end
+        found = 0;
+        for j = 1:numel(arr)
+            if strcmp(string(arr(j).ID), t.id)
+                found = j;
+                break;
+            end
+        end
+        if found == 0
+            error('animateAssem1:khongTimThayID', ...
+                ['Khong tim thay khop ung voi ID: %s (khop thu %d).\n' ...
+                 'Kiem tra lai ten chi tiet trong Assem1_DataFile.m, co the ' ...
+                 'ten khac do SolidWorks doi ten part.'], t.id, k);
+        end
+        loc(k).kind = t.kind;
+        loc(k).index = found;
+    end
+end
+
+function v = local_getVal(smiData, l)
+    if strcmp(l.kind, 'Cylindrical')
+        v = smiData.CylindricalJoint(l.index).Rz.Pos;
+    else
+        v = smiData.RevoluteJoint(l.index).Rz.Pos;
+    end
+end
+
+function smiData = local_setVal(smiData, l, v)
+    if strcmp(l.kind, 'Cylindrical')
+        smiData.CylindricalJoint(l.index).Rz.Pos = v;
+    else
+        smiData.RevoluteJoint(l.index).Rz.Pos = v;
+    end
+end
