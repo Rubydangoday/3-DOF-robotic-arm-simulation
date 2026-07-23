@@ -1,0 +1,55 @@
+function [pos, T03] = fk_3dof(th1, th2, th3)
+%FK_3DOF  Dong hoc thuan cho robot 3-DOF RRR (theo bang D-H da xac dinh)
+%
+%   [pos, T03] = fk_3dof(th1, th2, th3)
+%
+%   Input (don vi: DO):
+%       th1, th2, th3 - goc khop J1, J2, J3
+%
+%   Output:
+%       pos - [x y z] toa do TCP (mm), z tinh TU MAT DAT THUC TE
+%             (da cong them BASE_HEIGHT = chieu cao de tinh ben duoi O0)
+%       T03 - ma tran bien doi dong nhat 4x4 tu O0 den TCP (KHONG cong
+%             BASE_HEIGHT, van la he goc noi bo O0 dung cho ma tran quay)
+%
+%   Bang tham so D-H (Standard DH), do TU GOC O0 (tam truc quay J1):
+%       Khop 1: theta1, d1=144,   a1=0,   alpha1=90 deg
+%       Khop 2: theta2, d2=19.6,  a2=190, alpha2=0
+%       Khop 3: theta3, d3=0,     a3=230, alpha3=0
+%   (d2 = 19.6mm la do lech "vai" TONG CONG, da tru phan bu 9.9mm giua
+%   O0 va O1 khoi 29.5mm ban dau, vi hai do lech nay cung phuong)
+%
+%   BASE_HEIGHT = 147.5 mm: chieu cao de tinh co dinh (base_2, base_3...)
+%   nam duoi O0, KHONG phai tham so DH. Cong vao z de ra dung chieu cao
+%   so voi mat dat (vd: duoi thang hoan toan -> z = 291.5 mm).
+
+    % ---- Thong so hinh hoc co dinh (mm) ----
+    d1 = 144;
+    d2 = 19.6;
+    a2 = 190;
+    a3 = 230;
+    BASE_HEIGHT = 147.5;   % chieu cao de tinh, KHONG phai tham so DH
+
+    c1 = cosd(th1); s1 = sind(th1);
+    c2 = cosd(th2); s2 = sind(th2);
+    c23 = cosd(th2 - th3); s23 = sind(th2 - th3);
+
+    % Ban kinh hinh chieu trong mat phang khop 2-3
+    A = a2*c2 + a3*c23;
+
+    x = A*c1 - d2*s1;
+    y = A*s1 + d2*c1;
+    z0 = d1 + a2*s2 + a3*s23;      % z tinh tu O0 (goc DH)
+    z  = z0 + BASE_HEIGHT;         % z tinh tu mat dat thuc te
+
+    pos = [x, y, z];
+
+    if nargout > 1
+        % Ma tran quay 0->3 (huong TCP), dung de dung neu can dung sau nay.
+        % Dung z0 (khong cong BASE_HEIGHT) vi T03 la trong he goc O0.
+        R03 = [c1*c23, -c1*s23, -s1;
+               s1*c23, -s1*s23,  c1;
+              -s23,    -c23,     0];
+        T03 = [R03, [x; y; z0]; 0 0 0 1];
+    end
+end
