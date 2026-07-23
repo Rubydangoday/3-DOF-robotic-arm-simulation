@@ -1,0 +1,19 @@
+function valid = filter_valid_configs(sols)
+%FILTER_VALID_CONFIGS  Ket hop 2 dieu kien de xac dinh mot bo goc co
+%THUC SU kha thi hay khong:
+%   1) Nam trong gioi han khop co khi (filter_joint_limits.m)
+%   2) TCP khong cam xuong duoi mat dat: z >= 0 (tinh theo fk_3dof.m,
+%      z=0 la mat dat, xem BASE_HEIGHT trong fk_3dof.m)
+%   valid = filter_valid_configs(sols)   
+
+    limitOk = filter_joint_limits(sols);
+
+    n = size(sols, 1);
+    groundOk = false(n, 1);
+    for i = 1:n
+        pos = fk_3dof(sols(i,1), sols(i,2), sols(i,3));
+        groundOk(i) = pos(3) >= 0;
+    end
+
+    valid = limitOk & groundOk;
+end
