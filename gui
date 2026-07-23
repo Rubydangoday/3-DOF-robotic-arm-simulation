@@ -1,0 +1,251 @@
+function robot3dof_gui()
+%ROBOT3DOF_GUI  Giao dien nhap goc <-> toa do cho robot 3-DOF RRR, co
+%mo hinh que 3D truc quan va tuy chon dong bo voi mo hinh CAD that trong
+%Simscape Multibody (Mechanics Explorer).
+%   - Tab FK: nhap theta1,theta2,theta3 -> tra ve x,y,z. Neu goc VUOT gioi
+%     han khop, hien canh bao do va KHONG cho ve/dong bo mo hinh.
+%   - Tab IK: nhap x,y,z -> liet ke tat ca bo goc toan hoc, danh dau bo
+%     nao hop le (trong khong gian lam viec). Chon 1 dong hop le trong
+%     bang roi bam "Ap dung" de ve/dong bo. Neu chon dong khong hop le,
+%     hien canh bao do va KHONG chay.
+%   - Khung ben phai: mo hinh que 3D (O0-O1-O2-O3/TCP) cap nhat theo bo
+%     goc vua tinh/ap dung.
+%   - Panel "Dong bo Simscape" o duoi: neu bat, moi lan ve mo hinh que
+%     cung goi animateAssem1(...) de robot CAD that trong Mechanics
+%     Explorer chuyen dong theo (yeu cau da mo model va da chay
+%     calibrateAssem1Offsets de xac nhan mapping khop).
+%
+%   Gioi han khop: -180<=th1<=180 ; 0<=th2<=90 ; -135<=th3<=135 (do)
+
+    % ============== Cua so chinh ==============
+    fig = uifigure('Name', 'Dong hoc Robot 3-DOF RRR', 'Position', [80 60 1040 640]);
+
+    tg    = uitabgroup(fig, 'Position', [10 140 500 490]);
+    tabFK = uitab(tg, 'Title', 'Dong hoc thuan (FK)');
+    tabIK = uitab(tg, 'Title', 'Dong hoc nghich (IK)');
+
+    % ---- Panel mo hinh que 3D (ben phai) ----
+    pViz = uipanel(fig, 'Title', 'Mo hinh que 3D', 'Position', [520 140 510 490]);
+    ax = uiaxes(pViz, 'Position', [10 10 490 450]);
+    grid(ax, 'on'); axis(ax, 'equal'); view(ax, 135, 20);
+    xlabel(ax, 'x (mm)'); ylabel(ax, 'y (mm)'); zlabel(ax, 'z (mm)');
+    title(ax, 'Cau hinh hien tai');
+    R = 480; % gioi han truc de khung hinh khong bi nhay
+    xlim(ax, [-R R]); ylim(ax, [-R R]); zlim(ax, [0 R+150]);
+
+    % ---- Panel dong bo Simscape (duoi cung) ----
+    pSim = uipanel(fig, 'Title', 'Dong bo voi Simscape Multibody (tuy chon)', ...
+        'Position', [10 10 1020 120]);
+
+    simEnableBox = uicheckbox(pSim, 'Text', 'Bat dong bo voi mo hinh CAD that (Assem1.slx)', ...
+        'Position', [15 70 400 22], 'Value', false);
+
+    uilabel(pSim, 'Text', 'Ten model:', 'Position', [15 40 80 22]);
+    simModelField = uieditfield(pSim, 'text', 'Position', [95 40 150 22], 'Value', 'Assem1');
+
+    uilabel(pSim, 'Text', 'So buoc (1=nhanh):', 'Position', [265 40 110 22]);
+    simStepsField = uieditfield(pSim, 'numeric', 'Position', [375 40 60 22], 'Value', 1, 'Limits', [1 20]);
+
+    simStatusLabel = uilabel(pSim, 'Text', ...
+        'Chua dong bo. (Chay calibrateAssem1Offsets() truoc de kiem tra mapping khop!)', ...
+        'Position', [450 40 550 22], 'FontColor', [0.3 0.3 0.3]);
+
+    uibutton(pSim, 'Text', 'Kiem tra calibrate (in ra Command Window)', ...
+        'Position', [15 8 300 26], ...
+        'ButtonPushedFcn', @(btn,evt) doCalibrate());
+
+    % ============== TAB 1: FORWARD KINEMATICS ==============
+    uilabel(tabFK, 'Text', 'Nhap goc khop (do, trong gioi han cho phep):', ...
+        'Position', [20 420 400 22], 'FontWeight', 'bold');
+
+    uilabel(tabFK, 'Text', 'theta1  [-180 , 180]:', 'Position', [20 380 160 22]);
+    th1Field = uieditfield(tabFK, 'numeric', 'Position', [190 380 100 22], 'Value', 0);
+
+    uilabel(tabFK, 'Text', 'theta2  [   0 ,  90]:', 'Position', [20 345 160 22]);
+    th2Field = uieditfield(tabFK, 'numeric', 'Position', [190 345 100 22], 'Value', 0);
+
+    uilabel(tabFK, 'Text', 'theta3  [-135 ,  135]:', 'Position', [20 310 160 22]);
+    th3Field = uieditfield(tabFK, 'numeric', 'Position', [190 310 100 22], 'Value', 0);
+
+    uibutton(tabFK, 'Text', 'Tinh vi tri TCP + Ve / Dong bo', 'Position', [20 260 250 32], ...
+        'ButtonPushedFcn', @(btn, evt) calcFK());
+
+    fkResultLabel = uilabel(tabFK, 'Text', 'x = ---   y = ---   z = ---', ...
+        'Position', [20 210 460 30], 'FontSize', 14, 'FontWeight', 'bold');
+
+    fkWarnLabel = uilabel(tabFK, 'Text', '', 'Position', [20 175 460 50], ...
+        'FontColor', [0.75 0 0], 'FontWeight', 'bold', 'WordWrap', 'on');
+
+    % ============== TAB 2: INVERSE KINEMATICS ==============
+    uilabel(tabIK, 'Text', 'Nhap toa do dich TCP (mm), he goc O0:', ...
+        'Position', [20 420 400 22], 'FontWeight', 'bold');
+
+    uilabel(tabIK, 'Text', 'x (mm):', 'Position', [20 380 60 22]);
+    xField = uieditfield(tabIK, 'numeric', 'Position', [90 380 100 22], 'Value', 300);
+
+    uilabel(tabIK, 'Text', 'y (mm):', 'Position', [20 345 60 22]);
+    yField = uieditfield(tabIK, 'numeric', 'Position', [90 345 100 22], 'Value', 0);
+
+    uilabel(tabIK, 'Text', 'z (mm):', 'Position', [20 310 60 22]);
+    zField = uieditfield(tabIK, 'numeric', 'Position', [90 310 100 22], 'Value', 291.5);
+
+    uibutton(tabIK, 'Text', 'Tim tat ca bo goc', 'Position', [220 380 160 32], ...
+        'ButtonPushedFcn', @(btn, evt) calcIK());
+
+    ikNoteLabel = uilabel(tabIK, 'Text', '', 'Position', [20 260 460 40], ...
+        'FontColor', [0.75 0 0], 'WordWrap', 'on');
+
+    solTable = uitable(tabIK, 'Position', [20 100 460 155], ...
+        'ColumnName', {'th1(do)', 'th2(do)', 'th3(do)', 'Trang thai'}, ...
+        'ColumnWidth', {80, 80, 80, 190}, ...
+        'RowName', {}, ...
+        'SelectionType', 'row');
+
+    uibutton(tabIK, 'Text', 'Ap dung bo goc da chon (Ve / Dong bo)', 'Position', [20 55 300 32], ...
+        'ButtonPushedFcn', @(btn, evt) applySelection());
+
+    ikSelectedLabel = uilabel(tabIK, 'Text', 'Chua chon bo goc nao.', ...
+        'Position', [20 15 460 30], 'FontWeight', 'bold');
+
+    % ============== CALLBACK: FK ==============
+    function calcFK()
+        th1 = th1Field.Value; th2 = th2Field.Value; th3 = th3Field.Value;
+        pos = fk_3dof(th1, th2, th3);
+        fkResultLabel.Text = sprintf('x = %.2f mm    y = %.2f mm    z = %.2f mm', ...
+            pos(1), pos(2), pos(3));
+
+        valid = filter_valid_configs([th1 th2 th3]);
+        if ~valid
+            pos_check = fk_3dof(th1, th2, th3);
+            if pos_check(3) < 0
+                fkWarnLabel.Text = sprintf(['CANH BAO: to hop goc nay khien TCP nam DUOI MAT DAT ' ...
+                    '(z=%.1f mm < 0)!\nKhong ve mo hinh / khong dong bo Simscape.'], pos_check(3));
+            else
+                fkWarnLabel.Text = sprintf(['CANH BAO: goc nhap VUOT gioi han khop cho phep!\n' ...
+                    'Khong ve mo hinh / khong dong bo Simscape.']);
+            end
+            return;
+        end
+        fkWarnLabel.Text = '';
+        drawStick(th1, th2, th3);
+        syncSimscapeIfEnabled(th1, th2, th3);
+    end
+
+    % ============== CALLBACK: IK ==============
+    function calcIK()
+        x = xField.Value; y = yField.Value; z = zField.Value;
+        sols = ik_3dof(x, y, z);
+
+        if isempty(sols)
+            solTable.Data = {}; solTable.UserData = [];
+            ikNoteLabel.Text = 'Khong ton tai nghiem: diem nam ngoai tam voi hoac qua gan truc J1.';
+            return;
+        end
+
+        valid = filter_valid_configs(sols);
+        n = size(sols, 1);
+        data = cell(n, 4);
+        for i = 1:n
+            data{i,1} = round(sols(i,1), 2);
+            data{i,2} = round(sols(i,2), 2);
+            data{i,3} = round(sols(i,3), 2);
+            if valid(i)
+                data{i,4} = 'Hop le (trong khong gian lam viec)';
+            elseif ~filter_joint_limits(sols(i,:))
+                data{i,4} = 'Ngoai gioi han khop';
+            else
+                data{i,4} = 'TCP duoi mat dat (z<0)';
+            end
+        end
+        solTable.Data = data;
+        solTable.UserData = sols;
+
+        if any(valid)
+            ikNoteLabel.Text = sprintf('Tim thay %d/%d bo goc hop le. Chon 1 dong roi bam "Ap dung".', sum(valid), n);
+        else
+            ikNoteLabel.Text = sprintf('Co %d nghiem toan hoc nhung TAT CA deu vuot gioi han khop -> diem nam ngoai khong gian lam viec thuc te.', n);
+        end
+        ikSelectedLabel.Text = 'Chua chon bo goc nao.';
+    end
+
+    % ============== CALLBACK: chon nghiem IK ==============
+    function applySelection()
+        sel = solTable.Selection;
+        if isempty(sel)
+            uialert(fig, 'Vui long chon mot dong trong bang truoc khi ap dung.', 'Chua chon dong');
+            return;
+        end
+        row = sel(1);
+        sols = solTable.UserData;
+        chosen = sols(row, :);
+        valid = filter_valid_configs(chosen);
+
+        if ~valid
+            ikSelectedLabel.FontColor = [0.75 0 0];
+            ikSelectedLabel.Text = sprintf(['KHONG THE AP DUNG: bo goc nay vuot gioi han khop ' ...
+                '(th1=%.2f, th2=%.2f, th3=%.2f). Khong ve / khong dong bo.'], ...
+                chosen(1), chosen(2), chosen(3));
+            return;
+        end
+
+        ikSelectedLabel.FontColor = [0 0 0];
+        ikSelectedLabel.Text = sprintf('Da chon: th1=%.2f deg, th2=%.2f deg, th3=%.2f deg', ...
+            chosen(1), chosen(2), chosen(3));
+
+        th1Field.Value = chosen(1);
+        th2Field.Value = chosen(2);
+        th3Field.Value = chosen(3);
+
+        drawStick(chosen(1), chosen(2), chosen(3));
+        syncSimscapeIfEnabled(chosen(1), chosen(2), chosen(3));
+    end
+
+    % ============== VE MO HINH QUE 3D ==============
+    function drawStick(th1, th2, th3)
+        P = stick_points_3dof(th1, th2, th3);
+        cla(ax);
+        hold(ax, 'on');
+        plot3(ax, P(:,1), P(:,2), P(:,3), '-o', 'LineWidth', 3, ...
+            'MarkerSize', 7, 'MarkerFaceColor', [0.85 0.33 0.10], 'Color', [0.15 0.35 0.75]);
+        plot3(ax, 0, 0, 0, 's', 'MarkerSize', 10, 'MarkerFaceColor', 'k', 'Color', 'k'); % goc
+        text(ax, P(4,1), P(4,2), P(4,3)+15, 'TCP', 'Parent', ax);
+        hold(ax, 'off');
+        grid(ax, 'on'); axis(ax, 'equal');
+        xlim(ax, [-R R]); ylim(ax, [-R R]); zlim(ax, [0 R+150]);
+        title(ax, sprintf('th1=%.1f°  th2=%.1f°  th3=%.1f°', th1, th2, th3));
+    end
+
+    % ============== DONG BO SIMSCAPE (NEU BAT) ==============
+    function syncSimscapeIfEnabled(th1, th2, th3)
+        if ~simEnableBox.Value
+            return;
+        end
+        simStatusLabel.Text = 'Dang dong bo voi Mechanics Explorer...';
+        simStatusLabel.FontColor = [0.3 0.3 0.3];
+        drawnow;
+        try
+            opts.model = simModelField.Value;
+            opts.steps = round(simStepsField.Value);
+            animateAssem1([th1 th2 th3], opts);
+            simStatusLabel.Text = sprintf('Da dong bo thanh cong toi th1=%.1f, th2=%.1f, th3=%.1f (%s).', ...
+                th1, th2, th3, string(datetime('now'), 'HH:mm:ss'));
+            simStatusLabel.FontColor = [0 0.45 0];
+        catch ME
+            simStatusLabel.Text = ['Loi dong bo Simscape: ' ME.message];
+            simStatusLabel.FontColor = [0.75 0 0];
+        end
+    end
+
+    function doCalibrate()
+        try
+            calibrateAssem1Offsets();
+            uialert(fig, 'Da in ket qua calibrate ra Command Window cua MATLAB.', 'Xong', 'Icon', 'success');
+        catch ME
+            uialert(fig, ['Loi calibrate: ' ME.message], 'Loi', 'Icon', 'error');
+        end
+    end
+
+    % Ve san cau hinh mac dinh (0,0,0) khi mo GUI
+    drawStick(0, 0, 0);
+
+end
