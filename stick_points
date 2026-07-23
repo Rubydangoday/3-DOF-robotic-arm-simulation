@@ -1,0 +1,28 @@
+function P = stick_points_3dof(th1, th2, th3)
+%STICK_POINTS_3DOF  Tinh toa do 4 diem O0,O1,O2,O3(TCP) de ve robot dang
+%"que" (stick figure) trong khong gian 3D, dung DH da xac dinh. Toa do z
+%tinh TU MAT DAT THUC TE (dong bo voi fk_3dof.m/ik_3dof.m).
+%
+%   P = stick_points_3dof(th1, th2, th3)   % P: 4x3, moi hang [x y z] (mm)
+
+    d1 = 144; d2 = 19.6; a2 = 190; a3 = 230;
+    BASE_HEIGHT = 147.5;   % phai giong het gia tri trong fk_3dof.m
+
+    c1 = cosd(th1); s1 = sind(th1);
+    c2 = cosd(th2); s2 = sind(th2);
+    c23 = cosd(th2-th3); s23 = sind(th2-th3);
+
+    O0 = [0, 0, 0] + [0 0 BASE_HEIGHT];
+    O1 = [0, 0, d1] + [0 0 BASE_HEIGHT];
+
+    O2 = [ a2*c2*c1 - d2*s1, ...
+           a2*c2*s1 + d2*c1, ...
+           d1 + a2*s2 ] + [0 0 BASE_HEIGHT];
+
+    A3 = a2*c2 + a3*c23;
+    O3 = [ A3*c1 - d2*s1, ...
+           A3*s1 + d2*c1, ...
+           d1 + a2*s2 + a3*s23 ] + [0 0 BASE_HEIGHT];
+
+    P = [O0; O1; O2; O3];
+end
