@@ -1,0 +1,47 @@
+function workspace_bounds_3dof(N)
+%WORKSPACE_BOUNDS_3DOF  Uoc luong gioi han khong gian lam viec (x,y,z) cua
+%robot 3-DOF RRR bang phuong phap Monte Carlo: lay ngau nhien N bo goc
+%trong gioi han khop cho phep, tinh FK cho tung bo, loc bo cac diem
+%khong hop le (vuot gioi han khop hoac TCP duoi mat dat), roi bao cao
+%bien do (min/max) cua x, y, z va ban kinh hinh chieu ngang r=sqrt(x^2+y^2).
+%
+%   workspace_bounds_3dof()        % mac dinh N = 200000
+%   workspace_bounds_3dof(500000)  % tuy chinh so mau
+
+    if nargin < 1
+        N = 200000;
+    end
+
+    rng(0); % de ket qua lap lai duoc
+
+    th1 = -180 + 360*rand(N,1);   % [-180, 180]
+    th2 =    0 +  90*rand(N,1);   % [   0,  90]
+    th3 = -135 + 270*rand(N,1);   % [-135, 135]
+
+    sols = [th1, th2, th3];
+    valid = filter_valid_configs(sols);   % gioi han khop + z>=0
+
+    fprintf('So bo goc hop le: %d / %d (%.1f%%)\n', sum(valid), N, 100*sum(valid)/N);
+
+    pos = zeros(N,3);
+    for i = 1:N
+        pos(i,:) = fk_3dof(th1(i), th2(i), th3(i));
+    end
+
+    P = pos(valid, :);
+
+    fprintf('\n--- Gioi han khong gian lam viec (mm) ---\n');
+    fprintf('x: [%8.2f , %8.2f]\n', min(P(:,1)), max(P(:,1)));
+    fprintf('y: [%8.2f , %8.2f]\n', min(P(:,2)), max(P(:,2)));
+    fprintf('z: [%8.2f , %8.2f]\n', min(P(:,3)), max(P(:,3)));
+
+    r = sqrt(P(:,1).^2 + P(:,2).^2);
+    fprintf('r = sqrt(x^2+y^2) (ban kinh hinh chieu ngang): [%8.2f , %8.2f]\n', min(r), max(r));
+
+    % Ve dam may diem workspace de truc quan
+    figure('Name', 'Khong gian lam viec 3-DOF RRR');
+    scatter3(P(:,1), P(:,2), P(:,3), 2, P(:,3), 'filled');
+    xlabel('x (mm)'); ylabel('y (mm)'); zlabel('z (mm)');
+    title(sprintf('Khong gian lam viec (%d diem hop le / %d mau)', sum(valid), N));
+    colorbar; axis equal; grid on; view(135, 20);
+end
